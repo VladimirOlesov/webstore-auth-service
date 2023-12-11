@@ -1,6 +1,7 @@
 package com.example.webstoreauthservice.model.entity;
 
-import com.example.webstoreauthservice.model.enums.Role;
+import com.example.commoncode.model.entity.BaseEntity;
+import com.example.commoncode.model.enums.Role;
 import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

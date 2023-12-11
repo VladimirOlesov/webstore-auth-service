@@ -6,11 +6,11 @@ import static com.example.webstoreauthservice.model.entity.User.Fields.username;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.example.commoncode.exception.DuplicateException;
+import com.example.commoncode.model.enums.Role;
 import com.example.webstoreauthservice.IntegrationTestBase;
-import com.example.webstoreauthservice.exception.DuplicateException;
 import com.example.webstoreauthservice.model.dto.UserDtoRegister;
 import com.example.webstoreauthservice.model.entity.User;
-import com.example.webstoreauthservice.model.enums.Role;
 import com.example.webstoreauthservice.repository.UserRepository;
 import com.example.webstoreauthservice.service.impl.AuthServiceImpl;
 import java.util.UUID;

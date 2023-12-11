@@ -9,7 +9,7 @@ import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 
-import com.example.webstoreauthservice.exception.DuplicateException;
+import com.example.commoncode.exception.DuplicateException;
 import com.example.webstoreauthservice.model.dto.UserDtoRegister;
 import com.example.webstoreauthservice.repository.JwtService;
 import com.example.webstoreauthservice.repository.UserRepository;

@@ -1,9 +1,9 @@
 package com.example.webstoreauthservice.service.impl;
 
+import com.example.commoncode.model.enums.Role;
 import com.example.webstoreauthservice.model.dto.UserDto;
 import com.example.webstoreauthservice.model.dto.UserDtoRegister;
 import com.example.webstoreauthservice.model.entity.User;
-import com.example.webstoreauthservice.model.enums.Role;
 import com.example.webstoreauthservice.model.mapper.UserMapper;
 import com.example.webstoreauthservice.repository.UserRepository;
 import com.example.webstoreauthservice.service.UserService;

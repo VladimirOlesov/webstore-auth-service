@@ -1,6 +1,6 @@
 package com.example.webstoreauthservice.model.dto;
 
-import com.example.webstoreauthservice.model.enums.Role;
+import com.example.commoncode.model.enums.Role;
 import java.time.LocalDateTime;
 import java.util.UUID;
 import lombok.Builder;

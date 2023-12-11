@@ -1,6 +1,6 @@
 package com.example.webstoreauthservice.service.impl;
 
-import com.example.webstoreauthservice.exception.DuplicateException;
+import com.example.commoncode.exception.DuplicateException;
 import com.example.webstoreauthservice.model.dto.UserDtoLogin;
 import com.example.webstoreauthservice.model.dto.UserDtoRegister;
 import com.example.webstoreauthservice.model.entity.User;

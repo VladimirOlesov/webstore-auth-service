@@ -12,3 +12,6 @@ spring:
     password: password
     locations: classpath:db/migration/common, classpath:db/migration/local
 
+  docker:
+    compose:
+      enabled: false
