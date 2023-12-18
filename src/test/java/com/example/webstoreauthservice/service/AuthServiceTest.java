@@ -11,7 +11,6 @@ import static org.mockito.Mockito.verifyNoMoreInteractions;
 
 import com.example.commoncode.exception.DuplicateException;
 import com.example.webstoreauthservice.model.dto.UserDtoRegister;
-import com.example.webstoreauthservice.repository.JwtService;
 import com.example.webstoreauthservice.repository.UserRepository;
 import com.example.webstoreauthservice.service.impl.AuthServiceImpl;
 import org.junit.jupiter.api.AfterEach;

@@ -1,4 +1,4 @@
-package com.example.webstoreauthservice.repository;
+package com.example.webstoreauthservice.service;
 
 import org.springframework.security.core.userdetails.UserDetails;
 

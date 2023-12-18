@@ -2,7 +2,7 @@ package com.example.webstoreauthservice.controller;
 
 import com.example.webstoreauthservice.model.dto.UserDtoLogin;
 import com.example.webstoreauthservice.model.dto.UserDtoRegister;
-import com.example.webstoreauthservice.repository.AuthService;
+import com.example.webstoreauthservice.service.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -50,4 +50,10 @@ public class UserServiceImpl implements UserService {
   public UserDto getUserDtoByUsername(String username) {
     return userMapper.toUserDto(getUserByUsername(username));
   }
+
+  @Override
+  public UserDto getUserDtoByUuid(UUID uuid) {
+    return userMapper.toUserDto(userRepository.findByUserUuid(uuid)
+        .orElseThrow(() -> new EntityNotFoundException("Пользователь не найден")));
+  }
 }

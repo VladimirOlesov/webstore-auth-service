@@ -1,6 +1,6 @@
 package com.example.webstoreauthservice.config;
 
-import com.example.webstoreauthservice.repository.JwtService;
+import com.example.webstoreauthservice.service.JwtService;
 import com.example.webstoreauthservice.service.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

@@ -1,7 +1,7 @@
 package com.example.webstoreauthservice.service.impl;
 
 import com.example.webstoreauthservice.model.entity.User;
-import com.example.webstoreauthservice.repository.JwtService;
+import com.example.webstoreauthservice.service.JwtService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

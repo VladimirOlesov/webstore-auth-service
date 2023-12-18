@@ -2,7 +2,6 @@ package com.example.webstoreauthservice.controller;
 
 import com.example.webstoreauthservice.model.dto.UserDto;
 import com.example.webstoreauthservice.service.UserService;
-import com.example.webstoreauthservice.service.WebstoreAuthService;
 import jakarta.validation.Valid;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
@@ -16,13 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/users")
 public class UserController {
 
-  private final WebstoreAuthService webstoreAuthService;
-
   private final UserService userService;
 
   @GetMapping("/uuid/{uuid}")
   public UserDto getUserByUuid(@Valid @PathVariable UUID uuid) {
-    return webstoreAuthService.getUserDtoByUuid(uuid);
+    return userService.getUserDtoByUuid(uuid);
   }
 
   @GetMapping("/username/{username}")

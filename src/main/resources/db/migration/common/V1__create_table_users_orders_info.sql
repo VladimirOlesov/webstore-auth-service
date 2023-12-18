@@ -15,3 +15,16 @@ CREATE TABLE users
 );
 
 CREATE INDEX idx_users_uuid ON users (user_uuid);
+
+CREATE TABLE orders_info
+(
+    order_info_id bigserial primary key,
+    user_uuid     uuid not null
+);
+
+CREATE TABLE order_info_books
+(
+    order_info_id bigint references orders_info (order_info_id),
+    book_id       bigint not null,
+    title         varchar(255) not null
+);
