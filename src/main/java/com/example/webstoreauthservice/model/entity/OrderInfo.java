@@ -27,8 +27,15 @@ import lombok.NoArgsConstructor;
 @Table(name = "orders_info")
 public class OrderInfo extends BaseEntity {
 
+  /**
+   * Уникальный идентификатор пользователя.
+   */
+  @Column(name = "user_uuid", nullable = false, unique = true)
   private UUID userUuid;
 
+  /**
+   * Коллекция с информацией о заказанных книгах.
+   */
   @Builder.Default
   @ElementCollection
   @CollectionTable(name = "order_info_books", joinColumns = @JoinColumn(name = "order_info_id"))

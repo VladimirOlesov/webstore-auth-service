@@ -16,6 +16,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
+/**
+ * Реализация сервиса {@link JwtService} для аутентификации и регистрации пользователей.
+ */
 @Service
 public class JwtServiceImpl implements JwtService {
 
@@ -28,11 +31,23 @@ public class JwtServiceImpl implements JwtService {
   @Value("${jwt.claim.uuid}")
   private String claimUuid;
 
+  /**
+   * Извлечение имени пользователя из JWT.
+   *
+   * @param token JWT-токен.
+   * @return Имя пользователя.
+   */
   @Override
   public String extractUsername(String token) {
     return extractClaim(token, Claims::getSubject);
   }
 
+  /**
+   * Генерация JWT-токена на основе информации о пользователе.
+   *
+   * @param userDetails Информация о пользователе.
+   * @return Сгенерированный JWT-токен.
+   */
   @Override
   public String generateToken(UserDetails userDetails) {
     Map<String, Object> claims = new HashMap<>();
@@ -41,6 +56,13 @@ public class JwtServiceImpl implements JwtService {
     return generateToken(claims, userDetails);
   }
 
+  /**
+   * Проверка валидности JWT-токена для конкретного пользователя.
+   *
+   * @param token       JWT-токен.
+   * @param userDetails Информация о пользователе.
+   * @return true, если токен валиден, в противном случае - false.
+   */
   @Override
   public boolean isTokenValid(String token, UserDetails userDetails) {
     final String username = extractUsername(token);

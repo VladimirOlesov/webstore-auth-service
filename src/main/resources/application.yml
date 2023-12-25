@@ -20,14 +20,20 @@ spring:
     consumer:
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
-      properties:
-        spring.json.trusted.packages: com.example.webstoreauthservice.model.dto.OrderDto
 
 jwt:
   secret: AWqtLP+GFvnUBbpn1vbTpgmz8fwk6G14nQEVgJIBIVg=
   expiration: 86400000
   claim:
     uuid: userUuid
+
+logging:
+  level:
+    com:
+      example:
+        webstoreauthservice:
+          service: info
+    root: info
 
 server:
   port: 8081
